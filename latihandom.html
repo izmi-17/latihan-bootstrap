@@ -8,7 +8,10 @@
 <body>
     <h1 onclick="gantiTulisan(this)">Latihan 1</h1>
     <p id="pesan"></p>
+    <p onmouseover="gantiParagraf(this)">Ini paragraf yang akan diganti</p>
     <p id="pesan2"></p>
+    <p onmouseover="mouseLewat(this)">Sebelum Mouse Lewat</p>
+    <p onmouseout="mouseKeluar(this)">Sebelum Mouse keluar</p>
 
     <script>
     //pemanggilan dengan document.getElementById
@@ -21,6 +24,18 @@
 
         function gantiTulisan(id) {
             id.innerHTML = "Saya diklik.....";
+        }
+
+        function gantiParagraf(id) {
+            id.innerHTML = "<p>Ini paragraf yang sudah diganti</p>";
+        }
+
+        function mouseLewat(x) {
+            x.innerHTML = "Sesudah Mouse lewat";
+        }
+
+        function mouseKeluar(x1) {
+            x1.innerHTML = "Sesudah Mouse keluar";
         }
     </script>
 </body>
